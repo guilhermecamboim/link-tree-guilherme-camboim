@@ -103,6 +103,7 @@ export const ShareSection = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
+  padding: 0 30px;
 
   @media screen and (min-width: 600px) {
     width: 600px;
