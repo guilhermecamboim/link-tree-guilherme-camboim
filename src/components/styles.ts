@@ -5,42 +5,24 @@ background: ${props => props.theme.background.container};
 font-family: 'Roboto', sans-serif;
 color: ${props => props.theme.colors.primary};
 text-align: center;
-width: 300px;
-margin: 60px auto;
-padding: 3.7px;
-
-button { 
-  border: transparent;
-  background: transparent;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  :hover {
-    background: transparent;
-    transition: 300ms;
-    box-shadow: 0 0 1.5em ${props => props.theme.shadow};
-  }
-}
-
-.divSwitch {
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
+width: 100%;
+height: auto;
+padding: 50px 0;
+gap: 10px;
 `
 
 export const Body = styled.div`
 align-items: center;
+margin: 0 auto;
+
+@media screen and (min-width: 600px) {
+  width: 600px;
+}
 
 ul {
   list-style: none;
   align-items: center;
-  margin: 60px 45px 60px  auto;
+  margin: 30px;
 }
 
 ul li a {
@@ -53,8 +35,13 @@ ul li a {
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   color: ${props => props.theme.text};
-  text-transform: uppercase;
-  font-size: 14px
+  font-size: 14px;
+  gap: 12px;
+}
+
+img {
+  width: 32px;
+  height: 32px;
 }
 
 ul li a:hover {
@@ -65,6 +52,7 @@ ul li a:hover {
 `
 
 export const Header = styled.div`
+margin-bottom: 15px;
 img {
   margin-top: 10px;
   border: 0.25rem solid (var(--primary-color));
@@ -84,4 +72,51 @@ h1 {
   margin-top: 24px;
   margin-bottom: 8px;
 }
+`
+
+export const DivSwitch = styled.div`
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+`
+
+export const SwitchButton = styled.button`
+  border: transparent;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  :hover {
+    background: transparent;
+    transition: 300ms;
+    box-shadow: 0 0 1.5em ${props => props.theme.shadow};
+  }
+`
+
+export const ShareSection = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+
+  @media screen and (min-width: 600px) {
+    width: 600px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  img:hover {
+    transform: scale(1.03);
+    size: 1.1;
+    transition: 200ms;
+  }
 `
