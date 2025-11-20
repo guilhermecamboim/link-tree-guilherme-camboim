@@ -6,7 +6,7 @@ font-family: 'Roboto', sans-serif;
 color: ${props => props.theme.colors.primary};
 text-align: center;
 width: 100%;
-height: auto;
+height: 100vh;
 padding: 50px 0;
 gap: 10px;
 `
